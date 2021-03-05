@@ -11,7 +11,7 @@ weatherFcorm.addEventListener('submit', (e) => {
     const location = search.value
     para1.textContent = 'Loading...'
     para2.textContent = ''
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+    fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 paraerr.textContent = data.error
